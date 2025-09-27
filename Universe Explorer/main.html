@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Planet — Ultimate Universe Explorer</title>
+  <meta name="description" content="Offline-ready Universe Explorer — Earth-first tutorial, Solar System with orbits, procedural galaxies, neon glass UI." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">P</div>
+        <div class="title">
+          <div class="main">Planet</div>
+          <div class="sub">Ultimate Universe Explorer</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="bookmarkBtn" class="btn ghost">★ Save</button>
+        <button id="shareBtn" class="btn ghost">Share</button>
+        <button id="tutorialBtn" class="btn ghost">Tutorial</button>
+        <button id="voiceBtn" class="btn ghost">Voice: Off</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <canvas id="glcanvas"></canvas>
+      <canvas id="overlay"></canvas>
+
+      <div class="panel" id="infoPanel" style="display:none">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h3 id="panelTitle">Object</h3>
+          <button id="panelClose" class="btn ghost">✕</button>
+        </div>
+        <div id="panelContent" class="muted" style="margin-top:8px">Details will appear here when you click an object.</div>
+      </div>
+
+      <div class="tutorial" id="tutorial" style="display:none">
+        <div class="tcard">
+          <h2 id="tTitle">Welcome to Planet</h2>
+          <p id="tText">Click anywhere to jump to Earth and start a short interactive tutorial.</p>
+          <div style="display:flex;justify-content:flex-end;margin-top:12px;gap:8px">
+            <button id="tSkip" class="btn ghost">Skip</button>
+            <button id="tNext" class="btn primary">Start</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="minimap" id="minimap">
+        <canvas id="mini" width="320" height="320"></canvas>
+      </div>
+
+      <div class="tooltip" id="tooltip"></div>
+
+      <div class="float-controls">
+        <select id="levelSelect" class="select-level" title="Jump to level">
+          <option value="earth">Earth</option>
+          <option value="solar">Solar System</option>
+          <option value="galaxy">Galaxy</option>
+          <option value="universe">Universe</option>
+        </select>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div>© Planet Explorer</div>
+      <div class="muted">Real textures + stylized UI • Bookmarks • Share views</div>
+    </footer>
+  </div>
+
+  <!-- vendor libs (offline): place three.min.js and gsap.min.js in vendor/ -->
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/gsap.min.js"></script>
+
+  <!-- app scripts -->
+  <script src="ui.js"></script>
+  <script src="script.js"></script>
+  <script src="tutorial.js"></script>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Planet — Ultimate Universe Explorer</title>
+  <meta name="description" content="Offline-ready Universe Explorer — Earth-first tutorial, Solar System with orbits, procedural galaxies, neon glass UI." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">P</div>
+        <div class="title">
+          <div class="main">Planet</div>
+          <div class="sub">Ultimate Universe Explorer</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="bookmarkBtn" class="btn ghost">★ Save</button>
+        <button id="shareBtn" class="btn ghost">Share</button>
+        <button id="tutorialBtn" class="btn ghost">Tutorial</button>
+        <button id="voiceBtn" class="btn ghost">Voice: Off</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <canvas id="glcanvas"></canvas>
+      <canvas id="overlay"></canvas>
+
+      <div class="panel" id="infoPanel" style="display:none">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h3 id="panelTitle">Object</h3>
+          <button id="panelClose" class="btn ghost">✕</button>
+        </div>
+        <div id="panelContent" class="muted" style="margin-top:8px">Details will appear here when you click an object.</div>
+      </div>
+
+      <div class="tutorial" id="tutorial" style="display:none">
+        <div class="tcard">
+          <h2 id="tTitle">Welcome to Planet</h2>
+          <p id="tText">Click anywhere to jump to Earth and start a short interactive tutorial.</p>
+          <div style="display:flex;justify-content:flex-end;margin-top:12px;gap:8px">
+            <button id="tSkip" class="btn ghost">Skip</button>
+            <button id="tNext" class="btn primary">Start</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="minimap" id="minimap">
+        <canvas id="mini" width="320" height="320"></canvas>
+      </div>
+
+      <div class="tooltip" id="tooltip"></div>
+
+      <div class="float-controls">
+        <select id="levelSelect" class="select-level" title="Jump to level">
+          <option value="earth">Earth</option>
+          <option value="solar">Solar System</option>
+          <option value="galaxy">Galaxy</option>
+          <option value="universe">Universe</option>
+        </select>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div>© Planet Explorer</div>
+      <div class="muted">Real textures + stylized UI • Bookmarks • Share views</div>
+    </footer>
+  </div>
+
+  <!-- vendor libs (offline): place three.min.js and gsap.min.js in vendor/ -->
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/gsap.min.js"></script>
+
+  <!-- app scripts -->
+  <script src="ui.js"></script>
+  <script src="script.js"></script>
+  <script src="tutorial.js"></script>
+</body>
+</html>
