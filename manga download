@@ -1,0 +1,222 @@
+Download.kt
+│
+├── 0. Core Runtime Kernel
+│   ├── Coroutine Supervisor
+│   │   ├── Structured Concurrency Guard
+│   │   ├── Leak Detector
+│   │   ├── Job Tree
+│   │   └── Cancellation Propagation
+│   │
+│   ├── State Machine Engine
+│   │   ├── Download DAG Resolver
+│   │   ├── Transition Validator
+│   │   ├── Rollback Snapshots
+│   │   └── State Replay
+│   │
+│   └── Dependency Resolver
+│       ├── Task DAG Builder
+│       ├── Cycle Breaker
+│       └── Lazy Expansion
+│
+├── 1. Distributed Orchestrator
+│   ├── Multi-node Scheduler (LAN/Cloud)
+│   ├── Peer Worker Delegation
+│   ├── Device Load Balancer
+│   ├── Failover Migration
+│   ├── Raft-lite Queue Consensus
+│   └── Progress Aggregator
+│
+├── 2. Queue Intelligence
+│   ├── Adaptive Priority Engine
+│   │   ├── User Weighting
+│   │   ├── Chapter Scoring
+│   │   └── Source Stability Index
+│   │
+│   ├── Predictive Prefetch
+│   │   ├── Reading ML Model
+│   │   ├── Next-Chapter Predictor
+│   │   └── Bandwidth Forecast
+│   │
+│   ├── Queue Partitioning
+│   │   ├── Fast Lane
+│   │   ├── Background Queue
+│   │   └── Offline Sync Queue
+│   │
+│   └── Starvation Control
+│
+├── 3. Source Abstraction Layer
+│   ├── Multi-source Resolver
+│   │   ├── Mirror Selector
+│   │   ├── Health Scoring
+│   │   └── Fallback Chain
+│   │
+│   ├── Anti-block Engine
+│   │   ├── Cloudflare Solver (WebView)
+│   │   ├── Turnstile Handler
+│   │   ├── CAPTCHA Router
+│   │   └── Human fallback hook
+│   │
+│   ├── Request Morphing
+│   │   ├── Header Rotation
+│   │   ├── TLS Fingerprint (JA3)
+│   │   ├── HTTP/2 randomization
+│   │   └── Request Obfuscation
+│   │
+│   └── Session Engine
+│       ├── Cookie Federation
+│       ├── Session Recovery
+│       └── Token Renewal
+│
+├── 4. Download Execution Mesh
+│   ├── Chunk Downloader
+│   │   ├── Adaptive Chunking
+│   │   ├── Rebalancer
+│   │   ├── Dead Chunk Recovery
+│   │   └── Partial Stitching
+│   │
+│   ├── Parallelism Controller
+│   │   ├── Coroutine Pool Scaling
+│   │   ├── CPU/IO Splitter
+│   │   └── Thermal Throttle
+│   │
+│   ├── Retry System
+│   │   ├── Exponential Backoff
+│   │   ├── Error Classifier
+│   │   └── Retry Budget
+│   │
+│   └── Resume Engine
+│       ├── Block Resume
+│       ├── Hash Validation
+│       └── Partial Reconstruction
+│
+├── 5. Manifest & Content Graph
+│   ├── Manga Graph
+│   │   ├── Series Node
+│   │   ├── Chapter Node
+│   │   ├── Page Node
+│   │   └── Variant Node
+│   │
+│   ├── Parsers
+│   │   ├── JSON Parser
+│   │   ├── DOM Extractor
+│   │   ├── API Normalizer
+│   │   └── Heuristic Parser
+│   │
+│   ├── URL Resolver
+│   │   ├── Redirect Graph
+│   │   ├── Obfuscation Decoder
+│   │   └── Time-limited Resolver
+│   │
+│   └── Dedup System
+│       ├── Perceptual Hashing
+│       ├── URL Canonicalizer
+│       └── Chapter Fingerprints
+│
+├── 6. Image Pipeline
+│   ├── Decode Stage
+│   │   ├── JPEG Progressive
+│   │   ├── WEBP Stream
+│   │   └── AVIF Async
+│   │
+│   ├── GPU Layer (optional)
+│   │   ├── Vulkan Pipeline
+│   │   ├── Texture Cache
+│   │   └── HW Decode Offload
+│   │
+│   ├── Post-processing
+│   │   ├── Auto-rotation
+│   │   ├── Contrast Norm
+│   │   ├── ESRGAN Upscale
+│   │   └── Noise Filter Chain
+│   │
+│   └── Memory Manager
+│       ├── Bitmap Pool
+│       ├── Soft Cache
+│       └── GC Predictor
+│
+├── 7. Storage Layer
+│   ├── Hybrid Store
+│   │   ├── SQLite Index
+│   │   ├── File Object Store
+│   │   └── Encrypted Vault
+│   │
+│   ├── Write Optimizer
+│   │   ├── Batch Writes
+│   │   ├── Append Journal
+│   │   └── Deferred Commit
+│   │
+│   ├── Cache Hierarchy
+│   │   ├── RAM Cache
+│   │   ├── Disk Cache
+│   │   ├── Archive Cache
+│   │   └── Remote Sync
+│   │
+│   └── Integrity Ledger
+│       ├── Hash Registry
+│       ├── Corruption Detector
+│       └── Self-heal Recovery
+│
+├── 8. Network Optimizer
+│   ├── Protocol Switcher
+│   │   ├── HTTP/1 Fallback
+│   │   ├── HTTP/2 Multiplex
+│   │   └── HTTP/3 QUIC
+│   │
+│   ├── Congestion Control
+│   │   ├── Bandwidth Estimator
+│   │   ├── Latency Predictor
+│   │   └── Loss Adaptation
+│   │
+│   ├── Connection Fabric
+│   │   ├── Persistent Pool
+│   │   ├── Socket Reuse
+│   │   └── Region Switch
+│   │
+│   └── Network Anomaly Detect
+│       ├── Timeout Patterns
+│       └── ISP Throttle Heuristics
+│
+├── 9. Security Layer
+│   ├── Integrity Assurance
+│   │   ├── SHA-256 Chain
+│   │   ├── Merkle Chapters
+│   │   └── Tamper Logs
+│   │
+│   ├── Sandbox
+│   │   ├── WebView Isolation
+│   │   ├── Script Firewall
+│   │   └── Network Sandboxing
+│   │
+│   ├── Encryption
+│   │   ├── AES-GCM
+│   │   ├── Key Rotation
+│   │   └── Device-bound Keys
+│   │
+│   └── Anti-replay System
+│
+├── 10. Observability
+│   ├── Metrics Stream
+│   │   ├── Speed Graph
+│   │   ├── Source Success Rate
+│   │   └── Worker Heatmap
+│   │
+│   ├── Logging System
+│   │   ├── JSON Logs
+│   │   ├── Log Compression
+│   │   └── Crash Reconstruction
+│   │
+│   ├── Diagnostics
+│   │   ├── Bottleneck Detector
+│   │   ├── Failure Classifier
+│   │   └── Crash Predictor
+│   │
+│   └── Behavior Analytics
+│
+└── 11. Extension Ecosystem
+    ├── WASM Runtime
+    ├── Hot-reload Loader
+    ├── Plugin ABI
+    ├── Kotlin DSL Hooks
+    ├── Parser SDK
+    ├── Event Bus (Kafka-like)
+    └── Feature Flags System
