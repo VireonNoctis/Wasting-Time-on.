@@ -4,8 +4,6 @@ import type { NextRequest } from "next/server"
 
 const DEFAULT_ACCENT = "#a855f7" // purple accent for manga
 const TYPE_LABEL = "MANGA"
-
-// TODO: replace with your uploaded Lunar logo (files.catbox.moe link)
 const LUNAR_LOGO_URL = "https://files.catbox.moe/rl48xt.png"
 
 export async function GET(req: NextRequest) {
